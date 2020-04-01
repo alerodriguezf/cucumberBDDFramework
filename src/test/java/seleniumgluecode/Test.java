@@ -21,7 +21,7 @@ public class Test extends TestBase{
     }
 
     @Then("^La web nos redirige a la página de Categoría Comics$")
-    public void la_web_nos_redirige_a_la_página_de_Categoría_Comics() throws Throwable {
+    public void la_web_nos_redirige_a_la_pagina_de_Categoría_Comics() throws Throwable {
         Assert.assertTrue("No se redirecciono correctamente a la pagina de comics", comicsPage.isTitleComicsDisplayed());
 
     }

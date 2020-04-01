@@ -4,4 +4,4 @@ Feature: Categoria Comics
   Scenario: Ingresar en la categoría Comics desde la pantalla Home.
     Given   El usuario se encuentra en la pagina home de la web
     When    El usuario hace click sobre el botón de little tester comics
-    Then    La web nos redirige a la página de Categoría Comics
+    Then    La web nos redirige a la pagina de Categoría Comics
