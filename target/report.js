@@ -1,4 +1,55 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Login",
+  "description": "I want to log in on the website",
+  "id": "login",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 14209280900,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 4,
+  "name": "Go to the login page to perform the log in process",
+  "description": "",
+  "id": "login;go-to-the-login-page-to-perform-the-log-in-process",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "User is on the wbesite home page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "User clicks on the log in button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "Website redirects user to the login page",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "duration": 1222813000,
+  "status": "passed"
+});
+formatter.uri("test.feature");
 formatter.feature({
   "line": 1,
   "name": "Categoria Comics",
@@ -7,7 +58,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 12821276700,
+  "duration": 11335689200,
   "status": "passed"
 });
 formatter.scenario({
@@ -30,32 +81,29 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "La web nos redirige a la página de Categoría Comics",
+  "name": "La web nos redirige a la pagina de Categoría Comics",
   "keyword": "Then "
 });
 formatter.match({
   "location": "Test.el_usuario_se_encuentra_en_la_pagina_home_de_la_web()"
 });
 formatter.result({
-  "duration": 102550700,
+  "duration": 217161100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test.el_usuario_hace_click_sobre_el_botón_de_little_tester_comics()"
 });
 formatter.result({
-  "duration": 1330106600,
+  "duration": 786288300,
   "status": "passed"
 });
-formatter.match({
-  "location": "Test.la_web_nos_redirige_a_la_página_de_Categoría_Comics()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 170580900,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.after({
-  "duration": 1137793500,
+  "duration": 1209276000,
   "status": "passed"
 });
 });
