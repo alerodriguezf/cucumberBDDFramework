@@ -9,11 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = "src/test/java/features",
-        glue = "seleniumgluecode",
-        plugin = {"pretty",
-                "html:target",
-                "html:target/cucumber.xml",
-                "json:target/cucumber.json"}
+        glue = "seleniumgluecode"
 )
 
 public class Testrunner {

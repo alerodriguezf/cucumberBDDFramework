@@ -20,9 +20,9 @@ public class Test extends TestBase{
         homePage.clickOnTitleComics();
     }
 
-    @Then("^La web nos redirige a la página de Categoría Comics$")
+    /*@Then("^La web nos redirige a la página de Categoría Comics$")
     public void la_web_nos_redirige_a_la_pagina_de_Categoría_Comics() throws Throwable {
         Assert.assertTrue("No se redirecciono correctamente a la pagina de comics", comicsPage.isTitleComicsDisplayed());
 
-    }
+    }*/
 }

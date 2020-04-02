@@ -20,7 +20,7 @@ public class Hooks {
         System.out.println("Se esta ejecutando el scenario nro " + numberOfCase);
         driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
-        driver.get("https://imalittletester.com/");
+        driver.get("http://demo.testim.io/");
         driver.manage().window().maximize();
 
     }
