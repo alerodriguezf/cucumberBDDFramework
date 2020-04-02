@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage{
 
-    private String titleHomePage = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";
-    private By titleComicsLocator = By.id("menu-item-2008");
+    private String titleHomePage = "Space & Beyond | Testim.io demo";
+    private By loginButtonLocator = By.className("NavButton__nav-button___34wHC");
 
 
     public HomePage(WebDriver driver){
@@ -18,7 +18,9 @@ public class HomePage extends BasePage{
         return this.getTitle().equals(titleHomePage);
     }
 
-    public void clickOnTitleComics() throws Exception {
-        this.click(titleComicsLocator);
+    public void clickOnLoginButton() throws Exception {
+        this.click(loginButtonLocator);
     }
+
+
 }
