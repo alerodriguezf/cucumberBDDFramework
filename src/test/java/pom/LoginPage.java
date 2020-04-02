@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage{
 
-    private String loginPageTitle = "Login";
+    private String loginPageTitle = "LOGIN";
     private By loginPageTitleLocator = By.className("Login__headline-1___qo4Tz");
 
 
@@ -16,6 +16,7 @@ public class LoginPage extends BasePage{
 
     public boolean loginPageIsDisplayed() throws Exception {
         return this.isDisplayed(loginPageTitleLocator)&& this.getText(loginPageTitleLocator).equals(loginPageTitle);
+
     }
 
 

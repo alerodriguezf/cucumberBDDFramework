@@ -14,12 +14,12 @@ public class Login extends TestBase{
     }
 
     @When("^User clicks on the log in button$")
-    public void user_clicks_on_the_log_in_button() throws Throwable {
+    public void user_clicks_on_the_log_in_button() throws Exception {
         homePage.clickOnLoginButton();
     }
 
     @Then("^Website redirects user to the log in page$")
-    public void website_redirects_user_to_the_log_in_page() throws Throwable {
+    public void website_redirects_user_to_the_log_in_page() throws Exception {
         Assert.assertTrue("The current page is not the log in page expected",loginPage.loginPageIsDisplayed());
     }
 
