@@ -8,6 +8,7 @@ import org.junit.Assert;
 
 public class Login extends TestBase{
 
+    //SCENARIO 1
     @Given("^User is on the website home page$")
     public void user_is_on_the_website_home_page() throws Exception {
         Assert.assertTrue("The current page is not the home page",homePage.homePageIsDisplayed());
@@ -23,19 +24,21 @@ public class Login extends TestBase{
         Assert.assertTrue("The current page is not the log in page expected",loginPage.loginPageIsDisplayed());
     }
 
+    //SCENARIO 2 (OUTLINE)
     @Given("^User is on the website login page$")
     public void user_is_on_the_website_login_page() throws Exception {
+        homePage.clickOnLoginButton();
         Assert.assertTrue("The current page is not the log in page expected",loginPage.loginPageIsDisplayed());
     }
 
     @When("^User enters his username at username box \"([^\"]*)\"$")
     public void user_enters_his_username_at_username_box(String username) throws Exception {
-        loginPage.typeMessageInABox(username);
+        loginPage.typeMessageInAUserNameBox(username);
     }
 
     @When("^User enters his \"([^\"]*)\" at password box$")
     public void user_enters_his_at_password_box(String password) throws Exception {
-        loginPage.typeMessageInABox(password);
+        loginPage.typeMessageInAPasswordBox(password);
     }
 
     @When("^User clicks on the log in button at login page$")
@@ -45,21 +48,13 @@ public class Login extends TestBase{
 
     @Then("^Website shows \"([^\"]*)\" and \"([^\"]*)\"$")
     public void website_shows_and(String usernameErrorMessage, String passwordErrorMessage) throws Exception {
-        if (usernameErrorMessage == null){
-            Assert.assertFalse("Wrong username error message displayed",loginPage.userNameErrorMessageIsDisplayed(usernameErrorMessage));
-        }
-        else{
+        if (!usernameErrorMessage.equals("")){
             Assert.assertTrue("Wrong username error message displayed",loginPage.userNameErrorMessageIsDisplayed(usernameErrorMessage));
         }
 
-        if (passwordErrorMessage == null){
-            Assert.assertFalse("Wrong password error message displayed",loginPage.passwordErrorMessageIsDisplayed(passwordErrorMessage));
-        }
-        else{
+        if (!passwordErrorMessage.equals("")){
             Assert.assertTrue("Wrong password error message displayed",loginPage.passwordErrorMessageIsDisplayed(passwordErrorMessage));
         }
-
-        loginPage.passwordErrorMessageIsDisplayed(passwordErrorMessage);
     }
 
 

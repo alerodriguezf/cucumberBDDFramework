@@ -9,19 +9,18 @@ Feature: Login
 
   Scenario Outline: Introduce wrong credentials to log in
     The name must to have between 3 and 8 characters
+    The pass must to have between 8 and 15 characters, it must contains, at least, one special character and one number without spaces
     Given   User is on the website login page
     When    User enters his username at username box "<username>"
     And     User enters his "<password>" at password box
     And     User clicks on the log in button at login page
     Then    Website shows "<usernameErrorMessage>" and "<passwordErrorMessage>"
     Examples:
-      | username                  | password      | usernameErrorMessage       | passwordErrorMessage             |
+      | username                  | password      | usernameErrorMessage       | passwordErrorMessage         |
       |                           |               | Name is a required field.  | Password is a required field.|
       | pe                        | Password15!   | Name is a required field.  |                              |
-      | pep                       | Password15!   |                            |                              |
-      | pep456!                   | Password15!   |                            |                              |
       | pep pon                   | Password15!   | Name is a required field.  |                              |
-      | pep45678                  | Password15!   |                            |                              |
       | pep456789                 | Password15!   | Name is a required field.  |                              |
+
 
 
