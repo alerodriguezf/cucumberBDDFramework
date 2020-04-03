@@ -2,6 +2,7 @@ package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class BasePage {
 
@@ -54,6 +55,16 @@ public class BasePage {
             throw new Exception("No se pudo obtener el titulo del driver" );
         }
 
+    }
+
+    public void sendKeys(String string, By element) throws Exception {
+
+        try{
+            driver.findElement(element).sendKeys(string);
+        }
+        catch (Exception e){
+            throw new Exception("No se pudo obtener el enviar el string" );
+        }
     }
 
 
