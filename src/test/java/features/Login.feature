@@ -1,5 +1,4 @@
 Feature: Login
-  I want to log in on the website
 
   Scenario: Go to the login page to perform the log in process
     Given   User is on the website home page
@@ -7,9 +6,7 @@ Feature: Login
     Then    Website redirects user to the log in page
 
 
-  Scenario Outline: Introduce wrong credentials to log in
-    The name must to have between 3 and 8 characters
-    The pass must to have between 8 and 15 characters, it must contains, at least, one special character and one number without spaces
+  Scenario Outline: User types wrong credentials to log in
     Given   User is on the website login page
     When    User enters his username at username box "<username>"
     And     User enters his "<password>" at password box
@@ -21,6 +18,8 @@ Feature: Login
       | pe                        | Password15!   | Name is a required field.  |                              |
       | pep pon                   | Password15!   | Name is a required field.  |                              |
       | pep456789                 | Password15!   | Name is a required field.  |                              |
+
+
 
 
 
