@@ -16,8 +16,7 @@ Feature: Login
       | username                  | password      | usernameErrorMessage       | passwordErrorMessage         |
       |                           |               | Name is a required field.  | Password is a required field.|
       | pe                        | Password15!   | Name is a required field.  |                              |
-      | pep pon                   | Password15!   | Name is a required field.  |                              |
-      | pep456789                 | Password15!   | Name is a required field.  |                              |
+
 
 
 
