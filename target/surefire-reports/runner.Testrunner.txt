@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: runner.Testrunner
+-------------------------------------------------------------------------------
+Tests run: 28, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 65.779 s <<< FAILURE! - in runner.Testrunner
+Then Website shows "Name is a required field." and ""(| pep pon | Password15! | Name is a required field. |  |)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.Exception: No se pudo encontrar el elemento By.xpath: /html/body/div/div/section[3]/div/div[2]/div/form/div[1]/span[3]
+
+| pep pon | Password15! | Name is a required field. |  |  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.Exception: No se pudo encontrar el elemento By.xpath: /html/body/div/div/section[3]/div/div[2]/div/form/div[1]/span[3]
+
+Then Website shows "Name is a required field." and ""(| pep456789 | Password15! | Name is a required field. |  |)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.Exception: No se pudo encontrar el elemento By.xpath: /html/body/div/div/section[3]/div/div[2]/div/form/div[1]/span[3]
+
+| pep456789 | Password15! | Name is a required field. |  |  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.Exception: No se pudo encontrar el elemento By.xpath: /html/body/div/div/section[3]/div/div[2]/div/form/div[1]/span[3]
+
